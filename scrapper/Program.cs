@@ -37,4 +37,6 @@ async Task<IkeaJSONResponse> FetchIkeaDataAsync(string url)
 
 var response = await FetchIkeaDataAsync("https://api.tugc.ingka.com/review/info/v4/reviews/hr/hr/50552975");
 
+response.Reviews.Select(r => Mapping.MapReviewResponseToReview(r)).ToList().ForEach(r => Console.WriteLine(r.Id));
+
 Console.WriteLine("Hello, World!");

@@ -2,6 +2,28 @@ using System.ComponentModel.DataAnnotations;
 
 public class Review
 {
+    public Review()
+    {
+        Id = "";
+        CountryCode = "";
+        LangCode = "";
+        SourceCountryCode = "";
+        ContentLocale = "";
+        ItemNo = "";
+        Title = "";
+        Text = "";
+        IsRecommended = false;
+        IsVerifiedBuyer = false;
+        PositiveFeedbacksCount = 0;
+        NegativeFeedbacksCount = 0;
+        IsFeatured = false;
+        IsForeign = false;
+        SubmissionOn = new DateTime();
+        LatestModificationOn = new DateTime();
+        PrimaryRating = new PrimaryRating();
+        SecondaryRatings = new List<SecondaryRating>();
+    }
+
     [Key]
     public string Id { get; set; }
     public string CountryCode { get; set; }
