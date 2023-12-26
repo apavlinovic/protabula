@@ -35,8 +35,52 @@ async Task<IkeaJSONResponse> FetchIkeaDataAsync(string url)
     return ikeaResponse;
 }
 
-var response = await FetchIkeaDataAsync("https://api.tugc.ingka.com/review/info/v4/reviews/hr/hr/50552975");
 
-response.Reviews.Select(r => Mapping.MapReviewResponseToReview(r)).ToList().ForEach(r => Console.WriteLine(r.Id));
+var respones = new List<IkeaJSONResponse>();
+foreach (var locale in Locales.GetLocales())
+{
+    try
+    {
+        var response = await FetchIkeaDataAsync(
+            ReviewUrlBuilder.BuildUrl(locale, "00211088")
+        );
+
+        if (response != null)
+        {
+            respones.Add(response);
+            Console.WriteLine($"Fetched data for locale {locale} and productId 00211088");
+        }
+    }
+    catch (System.Exception)
+    {
+        // Console.WriteLine($"Failed to fetch data for locale {locale} and productId 90339233");
+    }
+}
+
+
+
+foreach (var response in respones)
+{
+    using (var context = new ScrapperDbContext())
+    {
+        var reviews = response.Reviews.Select(r => Mapping.MapReviewResponseToReview(r)).ToList();
+
+        foreach (var review in reviews)
+        {
+
+            // Check if the review already exists in the database
+            var existingReview = context.Reviews.FirstOrDefault(r => r.Id == review.Id);
+
+            if (existingReview == null)
+            {
+                // Review does not exist, add it to the database
+                context.Reviews.Add(review);
+            }
+
+            context.SaveChanges();
+        }
+    }
+
+}
 
 Console.WriteLine("Hello, World!");

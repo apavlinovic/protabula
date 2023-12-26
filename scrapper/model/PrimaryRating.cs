@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 public class PrimaryRating
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     public float RatingValue { get; set; }
     public float RatingRange { get; set; }
