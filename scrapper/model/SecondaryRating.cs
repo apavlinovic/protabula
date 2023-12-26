@@ -1,15 +1,14 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class SecondaryRating
 {
     [Key]
-    public Guid Id { get; set; }
-    public string RatingId { get; set; }
+    public int Id { get; set; }
     public float RatingValue { get; set; }
-    public int RatingRange { get; set; }
-    public int RatingPercentage { get; set; }
+    public float RatingRange { get; set; }
     public string Label { get; set; }
 
-    public Guid ReviewStatisticsId { get; set; }
-    public ReviewStatistics ReviewStatistics { get; set; }
+    [ForeignKey("Review")]
+    public string ReviewId { get; set; }
 }

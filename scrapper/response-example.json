@@ -1,0 +1,265 @@
+{
+    "reviewStatistics": {
+        "primaryRating": {
+            "ratingValue": 5,
+            "ratingRange": 5,
+            "ratingPercentage": 100
+        },
+        "secondaryRatings": {
+            "easyOfUse": {
+                "id": "easyOfUse",
+                "ratingRange": 5,
+                "ratingValue": 5,
+                "ratingPercentage": 100,
+                "label": "Kako ocjenjuješ jednostavnost sastavljanja/montaže?"
+            },
+            "valueForMoney": {
+                "id": "valueForMoney",
+                "ratingRange": 5,
+                "ratingValue": 5,
+                "ratingPercentage": 100,
+                "label": "Kako ocjenjuješ dobivenu vrijednost za uloženi novac?"
+            },
+            "durability": {
+                "id": "durability",
+                "ratingRange": 5,
+                "ratingValue": 4,
+                "ratingPercentage": 80,
+                "label": "Kako ocjenjuješ kvalitetu proizvoda?"
+            },
+            "design": {
+                "id": "design",
+                "ratingRange": 5,
+                "ratingValue": 4.5,
+                "ratingPercentage": 90,
+                "label": "Kako ocjenjuješ izgled proizvoda?"
+            },
+            "workAsExpected": {
+                "id": "workAsExpected",
+                "ratingRange": 5,
+                "ratingValue": 5,
+                "ratingPercentage": 100,
+                "label": "Je li proizvod funkcionalan u skladu s očekivanjima"
+            },
+            "foodEaseOfPreparing": {
+                "id": "foodEaseOfPreparing",
+                "ratingRange": 5,
+                "ratingValue": 0,
+                "ratingPercentage": 0,
+                "label": "Kako ocjenjuješ lakoću upotrebe/pripreme?"
+            },
+            "taste": {
+                "id": "taste",
+                "ratingRange": 5,
+                "ratingValue": 0,
+                "ratingPercentage": 0,
+                "label": "Kako ocjenjuješ okus?"
+            },
+            "sustainabilitySortWaste": {
+                "id": "sustainabilitySortWaste",
+                "ratingRange": 5,
+                "ratingValue": 0,
+                "ratingPercentage": 0,
+                "label": "Pomaže mi u smanjenju/razvrstavanju otpada"
+            },
+            "sustainabilitySaveEnergyOrWater": {
+                "id": "sustainabilitySaveEnergyOrWater",
+                "ratingRange": 5,
+                "ratingValue": 0,
+                "ratingPercentage": 0,
+                "label": "Pomaže mi u uštedi energije i/ili vode"
+            }
+        },
+        "ratingDistribution": [
+            { "ratingValue": 1, "ratingCount": 0 },
+            { "ratingValue": 2, "ratingCount": 0 },
+            { "ratingValue": 3, "ratingCount": 0 },
+            { "ratingValue": 4, "ratingCount": 0 },
+            { "ratingValue": 5, "ratingCount": 2 }
+        ],
+        "totalRatingCount": 2,
+        "totalReviewCount": 2,
+        "totalNegativeFeedbackCount": 0,
+        "totalPositiveFeedbackCount": 0,
+        "totalRecommendedCount": 2,
+        "totalNotRecommendedCount": 0,
+        "firstReviewedOn": "2023-11-05T08:03:57.769277Z",
+        "lastReviewedOn": "2023-12-08T16:00:42.431331Z"
+    },
+    "reviews": [
+        {
+            "id": "5ecba9f2-281d-4227-b97d-faf49d53c8e9",
+            "countryCode": "hr",
+            "langCode": "hr",
+            "sourceCountryCode": "hr",
+            "contentLocale": "hr_HR",
+            "itemNo": "50552975",
+            "title": "Borići",
+            "text": "Prikladni za sve prostore, čine ih ugodnijim",
+            "primaryRating": { "ratingValue": 5, "ratingRange": 5 },
+            "secondaryRatings": {
+                "easyOfUse": {
+                    "id": "easyOfUse",
+                    "ratingValue": 5,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ jednostavnost sastavljanja/montaže?"
+                },
+                "valueForMoney": {
+                    "id": "valueForMoney",
+                    "ratingValue": 5,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ dobivenu vrijednost za uloženi novac?"
+                },
+                "durability": {
+                    "id": "durability",
+                    "ratingValue": 4,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ kvalitetu proizvoda?"
+                },
+                "design": {
+                    "id": "design",
+                    "ratingValue": 5,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ izgled proizvoda?"
+                },
+                "workAsExpected": {
+                    "id": "workAsExpected",
+                    "ratingValue": 5,
+                    "ratingRange": 5,
+                    "label": "Je li proizvod funkcionalan u skladu s očekivanjima"
+                },
+                "foodEaseOfPreparing": {
+                    "id": "foodEaseOfPreparing",
+                    "ratingValue": 0,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ lakoću upotrebe/pripreme?"
+                },
+                "taste": {
+                    "id": "taste",
+                    "ratingValue": 0,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ okus?"
+                },
+                "sustainabilitySortWaste": {
+                    "id": "sustainabilitySortWaste",
+                    "ratingValue": 0,
+                    "ratingRange": 5,
+                    "label": "Pomaže mi u smanjenju/razvrstavanju otpada"
+                },
+                "sustainabilitySaveEnergyOrWater": {
+                    "id": "sustainabilitySaveEnergyOrWater",
+                    "ratingValue": 0,
+                    "ratingRange": 5,
+                    "label": "Pomaže mi u uštedi energije i/ili vode"
+                }
+            },
+            "isRecommended": true,
+            "reviewer": {
+                "displayName": "Potvrđeni recenzent",
+                "nickname": "Potvrđeni recenzent"
+            },
+            "isVerifiedBuyer": false,
+            "verifiedBuyerTranslations": {
+                "verifiedBuyerLabel": "",
+                "tooltipDescription": ""
+            },
+            "positiveFeedbacksCount": 0,
+            "negativeFeedbacksCount": 0,
+            "isFeatured": false,
+            "isForeign": false,
+            "submissionOn": "2023-12-08T16:00:42Z",
+            "latestModificationOn": "2023-12-11T07:51:45Z",
+            "responses": []
+        },
+        {
+            "id": "4156eda2-85a1-4f3b-ba7a-fe55a2a15ece",
+            "countryCode": "hr",
+            "langCode": "hr",
+            "sourceCountryCode": "hr",
+            "contentLocale": "hr_HR",
+            "itemNo": "50552975",
+            "title": "Odlična božićna šuma",
+            "text": "Drvca lijepo oblikuju božićnu šumu.. također su odlično upakirani u kutijicu …",
+            "primaryRating": { "ratingValue": 5, "ratingRange": 5 },
+            "secondaryRatings": {
+                "easyOfUse": {
+                    "id": "easyOfUse",
+                    "ratingValue": 5,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ jednostavnost sastavljanja/montaže?"
+                },
+                "valueForMoney": {
+                    "id": "valueForMoney",
+                    "ratingValue": 5,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ dobivenu vrijednost za uloženi novac?"
+                },
+                "durability": {
+                    "id": "durability",
+                    "ratingValue": 4,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ kvalitetu proizvoda?"
+                },
+                "design": {
+                    "id": "design",
+                    "ratingValue": 4,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ izgled proizvoda?"
+                },
+                "workAsExpected": {
+                    "id": "workAsExpected",
+                    "ratingValue": 5,
+                    "ratingRange": 5,
+                    "label": "Je li proizvod funkcionalan u skladu s očekivanjima"
+                },
+                "foodEaseOfPreparing": {
+                    "id": "foodEaseOfPreparing",
+                    "ratingValue": 0,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ lakoću upotrebe/pripreme?"
+                },
+                "taste": {
+                    "id": "taste",
+                    "ratingValue": 0,
+                    "ratingRange": 5,
+                    "label": "Kako ocjenjuješ okus?"
+                },
+                "sustainabilitySortWaste": {
+                    "id": "sustainabilitySortWaste",
+                    "ratingValue": 0,
+                    "ratingRange": 5,
+                    "label": "Pomaže mi u smanjenju/razvrstavanju otpada"
+                },
+                "sustainabilitySaveEnergyOrWater": {
+                    "id": "sustainabilitySaveEnergyOrWater",
+                    "ratingValue": 0,
+                    "ratingRange": 5,
+                    "label": "Pomaže mi u uštedi energije i/ili vode"
+                }
+            },
+            "isRecommended": true,
+            "reviewer": {
+                "displayName": "Potvrđeni recenzent",
+                "nickname": "Potvrđeni recenzent"
+            },
+            "isVerifiedBuyer": false,
+            "verifiedBuyerTranslations": {
+                "verifiedBuyerLabel": "",
+                "tooltipDescription": ""
+            },
+            "positiveFeedbacksCount": 0,
+            "negativeFeedbacksCount": 0,
+            "isFeatured": false,
+            "isForeign": false,
+            "submissionOn": "2023-11-05T08:03:57Z",
+            "latestModificationOn": "2023-11-07T09:16:50Z",
+            "responses": []
+        }
+    ],
+    "response": {
+        "status": { "code": 200, "message": "Ok" },
+        "size": 20,
+        "page": 0,
+        "resultCount": 2
+    }
+}

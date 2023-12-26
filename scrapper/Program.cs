@@ -27,9 +27,14 @@ async Task<IkeaJSONResponse> FetchIkeaDataAsync(string url)
 
     // Deserialize the response
     var content = await response.Content.ReadAsStringAsync();
-    var ikeaResponse = JsonSerializer.Deserialize<IkeaJSONResponse>(content);
+    var ikeaResponse = JsonSerializer.Deserialize<IkeaJSONResponse>(content, new JsonSerializerOptions
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+    });
 
     return ikeaResponse;
 }
 
 var response = await FetchIkeaDataAsync("https://api.tugc.ingka.com/review/info/v4/reviews/hr/hr/50552975");
+
+Console.WriteLine("Hello, World!");

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 public class Review
 {
     [Key]
-    public Guid Id { get; set; }
+    public string Id { get; set; }
     public string CountryCode { get; set; }
     public string LangCode { get; set; }
     public string SourceCountryCode { get; set; }
@@ -22,8 +22,4 @@ public class Review
 
     public PrimaryRating PrimaryRating { get; set; }
     public List<SecondaryRating> SecondaryRatings { get; set; }
-    public Reviewer Reviewer { get; set; }
-
-    public Guid ReviewStatisticsId { get; set; }
-    public ReviewStatistics ReviewStatistics { get; set; }
 }
