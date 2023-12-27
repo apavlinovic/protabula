@@ -16,6 +16,7 @@ bld/
 # Visual Studio code files
 .vscode/
 scraper.db
+.DS_Store
 
 # NuGet packages
 *.nuget.props
