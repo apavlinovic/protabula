@@ -1,10 +1,12 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 public class Review
 {
     public Review()
     {
-        Id = "";
+        ReviewGuid = "";
         CountryCode = "";
         LangCode = "";
         SourceCountryCode = "";
@@ -14,18 +16,15 @@ public class Review
         Text = "";
         IsRecommended = false;
         IsVerifiedBuyer = false;
-        PositiveFeedbacksCount = 0;
-        NegativeFeedbacksCount = 0;
-        IsFeatured = false;
-        IsForeign = false;
         SubmissionOn = new DateTime();
-        LatestModificationOn = new DateTime();
         PrimaryRating = new PrimaryRating();
         SecondaryRatings = new List<SecondaryRating>();
     }
 
     [Key]
-    public string Id { get; set; }
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int Id { get; set; }
+    public string ReviewGuid { get; set; }
     public string CountryCode { get; set; }
     public string LangCode { get; set; }
     public string SourceCountryCode { get; set; }
@@ -35,13 +34,10 @@ public class Review
     public string Text { get; set; }
     public bool IsRecommended { get; set; }
     public bool IsVerifiedBuyer { get; set; }
-    public int PositiveFeedbacksCount { get; set; }
-    public int NegativeFeedbacksCount { get; set; }
-    public bool IsFeatured { get; set; }
-    public bool IsForeign { get; set; }
     public DateTime SubmissionOn { get; set; }
-    public DateTime LatestModificationOn { get; set; }
-
+    [JsonIgnore]
+    public int ProductId { get; set; }
+    public Product Product { get; set; }
     public PrimaryRating PrimaryRating { get; set; }
     public List<SecondaryRating> SecondaryRatings { get; set; }
 }

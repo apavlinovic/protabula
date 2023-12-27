@@ -10,5 +10,5 @@ public class PrimaryRating
     public float RatingRange { get; set; }
 
     [ForeignKey("Review")]
-    public string ReviewId { get; set; }
+    public int ReviewId { get; set; }
 }

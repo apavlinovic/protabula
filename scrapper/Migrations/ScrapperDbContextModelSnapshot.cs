@@ -28,9 +28,8 @@ namespace protabula.Migrations
                     b.Property<float>("RatingValue")
                         .HasColumnType("REAL");
 
-                    b.Property<string>("ReviewId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("ReviewId")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -40,10 +39,46 @@ namespace protabula.Migrations
                     b.ToTable("PrimaryRatings");
                 });
 
+            modelBuilder.Entity("Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Family")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Manufacturer")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProductId_EU")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProductId_US")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Products");
+                });
+
             modelBuilder.Entity("Review", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ContentLocale")
                         .IsRequired()
@@ -52,12 +87,6 @@ namespace protabula.Migrations
                     b.Property<string>("CountryCode")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsFeatured")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("IsForeign")
-                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsRecommended")
                         .HasColumnType("INTEGER");
@@ -73,14 +102,12 @@ namespace protabula.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("LatestModificationOn")
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ReviewGuid")
+                        .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("NegativeFeedbacksCount")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("PositiveFeedbacksCount")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("SourceCountryCode")
                         .IsRequired()
@@ -98,6 +125,8 @@ namespace protabula.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Reviews");
                 });
@@ -118,9 +147,8 @@ namespace protabula.Migrations
                     b.Property<float>("RatingValue")
                         .HasColumnType("REAL");
 
-                    b.Property<string>("ReviewId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("ReviewId")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -138,6 +166,17 @@ namespace protabula.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Review", b =>
+                {
+                    b.HasOne("Product", "Product")
+                        .WithMany("Reviews")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("SecondaryRating", b =>
                 {
                     b.HasOne("Review", null)
@@ -145,6 +184,11 @@ namespace protabula.Migrations
                         .HasForeignKey("ReviewId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Product", b =>
+                {
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("Review", b =>

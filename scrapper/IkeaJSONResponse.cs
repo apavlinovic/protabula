@@ -3,6 +3,7 @@ public class IkeaJSONResponse
     public ReviewStatisticsResponse ReviewStatistics { get; set; }
     public List<ReviewResponse> Reviews { get; set; }
     public ResponseMeta Response { get; set; }
+    public int ProductId { get; set; }
 }
 
 public class ReviewResponse

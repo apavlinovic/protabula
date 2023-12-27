@@ -17,6 +17,8 @@ bld/
 .vscode/
 scraper.db
 .DS_Store
+credentials.json
+Google.Apis.Auth.OAuth2.Responses.TokenResponse-user
 
 # NuGet packages
 *.nuget.props
