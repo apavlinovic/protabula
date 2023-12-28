@@ -7,10 +7,6 @@ async Task<IkeaJSONResponse> FetchIkeaDataAsync(string url)
 
     // Set the headers
     httpClient.DefaultRequestHeaders.Add("Accept", "application/json, text/plain, */*");
-    httpClient.DefaultRequestHeaders.Add("Host", "api.tugc.ingka.com");
-    httpClient.DefaultRequestHeaders.Add("Origin", "https://www.ikea.com");
-    httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15");
-    httpClient.DefaultRequestHeaders.Add("Referer", "https://www.ikea.com/");
     httpClient.DefaultRequestHeaders.Add("client-id", "35c8ad54-a47f-4c9d-9fc3-511acd9bd595");
 
     try
@@ -27,11 +23,24 @@ async Task<IkeaJSONResponse> FetchIkeaDataAsync(string url)
         {
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase
         });
+
         return ikeaResponse;
+    }
+    catch (HttpRequestException e)
+    {
+        Console.WriteLine($"{e.StatusCode} | {url}");
+        return null;
+    }
+    catch (JsonException e)
+    {
+        Console.WriteLine(e.Message);
+        Console.WriteLine(url);
+        return null;
     }
     catch (System.Exception e)
     {
-        Console.WriteLine(e.Message);
+        Console.WriteLine("Something went wrong while fetching data from IKEA.");
+        Console.WriteLine(url);
         return null;
     }
 }

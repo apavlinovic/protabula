@@ -32,7 +32,7 @@ public class Review
     public string ItemNo { get; set; }
     public string Title { get; set; }
     public string Text { get; set; }
-    public bool IsRecommended { get; set; }
+    public bool IsRecommended { get; set; } = false;
     public bool IsVerifiedBuyer { get; set; }
     public DateTime SubmissionOn { get; set; }
     [JsonIgnore]
